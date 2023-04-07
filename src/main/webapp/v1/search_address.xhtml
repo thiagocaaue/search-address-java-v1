@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<f:facet name="first">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	</f:facet>
+	<title>TSTI - Technology</title>
+</h:head>
+
+<h:body styleClass="p-grid"
+	style="margin-left:8%; margin-right:8%; margin-top:3%">
+
+	<h:form id="form">
+
+		<div class="layout-content">
+
+			<div class="p-col-12">
+
+				<h4>Search Address - TSTI Resources</h4>
+
+				<div class="card">
+
+					<div class="ui-fluid p-formgrid p-grid">
+
+						<div class="p-field p-col-12 p-md-8">
+							<p:outputLabel for="cep" value="CEP:" />
+							<p:inputText id="cep" required="true"
+								value="#{addressView.postalCode}" />
+						</div>
+
+						<div class="p-field p-col-12 p-md-4" style="margin-top: 25px; margin-bottom: 35px;">
+							<p:commandButton id="searchButton"
+								icon="pi pi-search" value="Pesquisar" type="submit"
+								onclick="PF('progress').show()"
+								action="#{addressView.searchPostalCode}" ajax="false" />
+						</div>
+
+						<div class="p-field p-col-12 p-md-12">
+							<h5>Dados do Endereço</h5>
+						</div>
+
+						<div class="p-field p-col-12 p-md-2">
+							<p:outputLabel for="type" value="Tipo:" />
+							<p:inputText id="type" disabled="true"
+								value="#{addressView.address.placeType}" />
+						</div>
+
+						<div class="p-field p-col-12 p-md-4">
+							<p:outputLabel for="publicPlace" value="Logradouro:" />
+							<p:inputText id="publicPlace" disabled="true"
+								value="#{addressView.address.publicName}" />
+						</div>
+
+						<div class="p-field p-col-12 p-md-2">
+							<p:outputLabel for="district" value="Bairro:" />
+							<p:inputText id="district" disabled="true"
+								value="#{addressView.address.district}" />
+						</div>
+						<div class="p-field p-col-12 p-md-3">
+							<p:outputLabel for="city" value="Cidade:" />
+							<p:inputText id="city" disabled="true"
+								value="#{addressView.address.city.name}" />
+						</div>
+						<div class="p-field p-col-12 p-md-1">
+							<p:outputLabel for="state" value="UF:" />
+							<p:inputText id="state" disabled="true"
+								value="#{addressView.address.city.state}" />
+						</div>
+
+					</div>
+
+				</div>
+
+				<p:dialog header="Pesquisando..." width="50%" showEffect="fade"
+					modal="true" closable="false" widgetVar="progress"
+					responsive="true">
+					<p style="text-align: center">
+						<p:progressBar id="progressBar" style="height:10px; width:100%"
+							mode="indeterminate" rendered="true" />
+					</p>
+				</p:dialog>
+
+				<div style="text-align: center;">
+					<p>
+						<a href="https://github.com/thiagocaaue">GitHub</a>
+					</p>
+
+					<p>
+						Copyright © - Developed by <a href="https://www.linkedin.com/in/thiagocaaue/">thiagocaaue</a>.
+					</p>
+
+				</div>
+
+			</div>
+		</div>
+
+		<h:outputStylesheet name="css/primeflex.min.css"
+			library="primefaces-layout" />
+		<h:outputStylesheet id="layout-scheme" name="css/layout-light.css"
+			library="primefaces-layout" />
+		<h:outputStylesheet name="css/primeicons.css" library="primefaces-layout" />
+		<h:outputScript name="locales/locale-pt.js" library="primefaces" />
+
+	</h:form>
+</h:body>
+
+</html>
