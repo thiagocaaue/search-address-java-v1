@@ -21,6 +21,8 @@
 
 	<h:form id="form">
 
+		<p:growl id="message" showDetail="true" />
+
 		<div class="layout-content">
 
 			<div class="p-col-12">
@@ -37,10 +39,10 @@
 								value="#{addressView.postalCode}" />
 						</div>
 
-						<div class="p-field p-col-12 p-md-4" style="margin-top: 25px; margin-bottom: 35px;">
-							<p:commandButton id="searchButton"
-								icon="pi pi-search" value="Pesquisar" type="submit"
-								onclick="PF('progress').show()"
+						<div class="p-field p-col-12 p-md-4"
+							style="margin-top: 25px; margin-bottom: 35px;">
+							<p:commandButton id="searchButton" icon="pi pi-search"
+								value="Pesquisar" type="submit" onclick="PF('progress').show()"
 								action="#{addressView.searchPostalCode}" ajax="false" />
 						</div>
 
@@ -95,7 +97,8 @@
 					</p>
 
 					<p>
-						Copyright © - Developed by <a href="https://www.linkedin.com/in/thiagocaaue/">thiagocaaue</a>.
+						Copyright © - Developed by <a
+							href="https://www.linkedin.com/in/thiagocaaue/">thiagocaaue</a>.
 					</p>
 
 				</div>
@@ -107,7 +110,8 @@
 			library="primefaces-layout" />
 		<h:outputStylesheet id="layout-scheme" name="css/layout-light.css"
 			library="primefaces-layout" />
-		<h:outputStylesheet name="css/primeicons.css" library="primefaces-layout" />
+		<h:outputStylesheet name="css/primeicons.css"
+			library="primefaces-layout" />
 		<h:outputScript name="locales/locale-pt.js" library="primefaces" />
 
 	</h:form>

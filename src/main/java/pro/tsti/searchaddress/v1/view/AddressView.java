@@ -44,13 +44,12 @@ public class AddressView implements Serializable {
 			} else {
 
 				FacesContext.getCurrentInstance().addMessage(null,
-						new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro", "Erro ao buscar o CEP"));
+						new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro", "CEP inválido"));
 			}
 
 		}
 
-		PrimeFaces.current().executeScript("PF('manageNaturalPersonDialog').hide()");
-		PrimeFaces.current().ajax().update("form:messages");
+		PrimeFaces.current().ajax().update("form:message");
 		PrimeFaces.current().ajax().update("form");
 
 	}
@@ -70,7 +69,5 @@ public class AddressView implements Serializable {
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
-	
-	
 
 }
