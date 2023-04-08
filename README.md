@@ -13,7 +13,9 @@ A UI implementa apenas o recurso PesquisaCEP do WebService dos correios, que con
 ![Web 1](https://github.com/thiagocaaue/search-address-java-v1/blob/main/assets/img_1.png)
 
 ## Recursos WebService Correios
-![Resource](https://github.com/thiagocaaue/search-address-java-v1/blob/main/assets/img_2.png)
+![Resource1](https://github.com/thiagocaaue/search-address-java-v1/blob/main/assets/img_2.png)
+
+![Resource2](https://github.com/thiagocaaue/search-address-java-v1/blob/main/assets/img_3.png)
 
 # Tecnologias
 ## Back end
