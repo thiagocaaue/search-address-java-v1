@@ -3,74 +3,49 @@
 
 # Sobre o projeto
 
-Este projeto faz parte da série de recursos utilizados em aplicações que implementam integrações de sistemas.
+Este projeto faz parte da série de módulos de recursos utilizados em aplicações que implementam integrações e utilitarios de sistemas.
 
 Este recurso utiliza implentação Java com integração ao WebService dos correios, utilizando os recursos disponibilizados pela empresa.
 
-## Layout mobile
-![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
+A UI implementa apenas o recurso PesquisaCEP do WebService dos correios, que consiste em consultar a base dos correios e retornar uma resposta.
 
-## Layout web
-![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
+## Interface Web
+![Web 1](https://github.com/thiagocaaue/search-address-java-v1/blob/main/assets/img_1.png)
 
-![Web 2](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
+## Recursos WebService Correios
+![Resource](https://github.com/thiagocaaue/search-address-java-v1/blob/main/assets/img_2.png)
 
-## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
-
-# Tecnologias utilizadas
+# Tecnologias
 ## Back end
 - Java
-- Spring Boot
-- JPA / Hibernate
+- JSF
 - Maven
+- SOAP
+
 ## Front end
-- HTML / CSS / JS / TypeScript
-- ReactJS
-- React Native
-- Apex Charts
-- Expo
-## Implantação em produção
-- Back end: Heroku
-- Front end web: Netlify
-- Banco de dados: Postgresql
+- HTML / CSS
+- Primefaces
 
-# Como executar o projeto
+## Implementações
+- Integração do WebService dos correios (SOAP)
+- Aplicação de UI utilizando Primefaces
+- Map de resposta do recurso ConsultaCEP
+- Gerenciamento Maven
+- Aplicação de JSF
 
-## Back end
-Pré-requisitos: Java 11
+# Projeto
 
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
+## Requisitos
+- Java 11
+- Primefaces 10
+- Eclipse
+- Wsdl Correios
 
-# entrar na pasta do projeto back end
-cd backend
-
-# executar o projeto
-./mvnw spring-boot:run
-```
-
-## Front end web
-Pré-requisitos: npm / yarn
-
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
-
-# entrar na pasta do projeto front end web
-cd front-web
-
-# instalar dependências
-yarn install
-
-# executar o projeto
-yarn start
-```
+Nota: Importar o projeto na IDE Eclipse.
 
 # Autor
 
-Wellington Mazoni de Andrade
+Thiago Caauê
 
-https://www.linkedin.com/in/wmazoni
+https://www.linkedin.com/in/thiagocaaue
 
