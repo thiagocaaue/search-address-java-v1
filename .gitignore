@@ -1,7 +1,13 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+*.class
+
 # dependencies
 /target
+
+#SSH Keys
+*.pem
+*.ppk
 
 # IDEs and editors
 /.idea
@@ -13,6 +19,19 @@
 *.sublime-workspace
 nb-configuration.xml
 nbactions.xml
+
+#Eclipse Files
+**/.project
+**/.classpath
+**/.settings
+/bin/
+blog/bin
+**/.tern-project
+
+#Package Files
+*.jar
+*.war
+*.ear
 
 # IDE - VSCode
 .vscode/*
